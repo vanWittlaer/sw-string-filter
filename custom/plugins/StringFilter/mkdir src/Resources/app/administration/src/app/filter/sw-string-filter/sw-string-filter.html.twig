@@ -1,0 +1,22 @@
+<sw-base-filter
+    class="sw-string-filter"
+    :title="filter.label"
+    :filter="filter"
+    :active="active"
+    :value="value"
+    :property="filter.property"
+    :show-reset-button="!!value"
+    @filter-update="updateFilter"
+    @filter-reset="resetFilter"
+>
+    <template>
+        <sw-select-field
+            :value="value"
+            :placeholder="filter.placeholder"
+            @change="updateFilter"
+        >
+            <option v-for="(name, key) in filter.options" :value="key">{{ name }}</option>
+        </sw-select-field>
+    </template>
+
+</sw-base-filter>

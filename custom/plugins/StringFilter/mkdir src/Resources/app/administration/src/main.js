@@ -1,0 +1,1 @@
+import './app/filter/sw-string-filter';
